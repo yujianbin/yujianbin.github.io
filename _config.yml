@@ -20,10 +20,10 @@ comment:
 gitalk:
     enable: true    #是否开启Gitalk评论
     repo: yujianbin.github.io    #仓库名称
-    clientID: c9cc8c31ff9f5cf4d407
-    clientSecret: 11d3da7245c94efed68d758a906209dea1accd2e
+    clientID: af6ba289b913b6f55eb8
+    clientSecret: 43e2d19b36df5206e54d77d78edb49036a16aa55
     owner: yujianbin    #github用户名
-    admin: yujianbin
+    admin: yujianbinBlog
     distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
