@@ -12,12 +12,24 @@ url: http://yujianbin.github.io
 
 # Comment
 comment:
+    enable: false    #
     disqus: yujianbin
     # uyan: 2143225  # 有言id,登录有言官网申请
 
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    enable: true    #是否开启Gitalk评论
+    repo: yujianbin.github.io    #仓库名称
+    clientID: c9cc8c31ff9f5cf4d407
+    clientSecret: 11d3da7245c94efed68d758a906209dea1accd2e
+    owner: yujianbin    #github用户名
+    admin: yujianbin
+    distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
 # Social
 social:
-    weibo: 5366874726
+    # weibo: 5366874726
     github: yjbGitHub
     # twitter:
     mail: yjbayt@163.com
