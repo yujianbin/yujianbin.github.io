@@ -12,20 +12,20 @@ url: http://yujianbin.github.io
 
 # Comment
 comment:
-    disqus: leopard
+    disqus: yujianbin
     # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
 social:
     weibo: 5366874726
-    github: leopardpan
+    github: yjbGitHub
     # twitter:
-    mail: leopardpan@icloud.com
+    mail: yjbayt@163.com
 
 # 百度统计
 # 使用博客模板请去掉或者更换 id
 baidu:
-    id: 8ba1c6be0953b6f9c2ba38e57f615421
+    id: ec9954feab3410e7c444ae7e6160af64
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
