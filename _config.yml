@@ -2,11 +2,13 @@
 title: 于建斌
 subtitle: 个人站
 description: 欢迎来到我的个人站~
+keywords: 于建斌, yujianbin, iOS, Android
+
 # 头像里面的标题
 avatarTitle: Bruce Yu
 # 头像里面的描述
 avatarDesc: iOS / Android
-url: "http://baixin.io"
+url: http://yujianbin.github.io
 
 # Comment
 comment:
