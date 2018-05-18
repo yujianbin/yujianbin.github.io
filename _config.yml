@@ -1,14 +1,32 @@
-# Basic
+
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+url: http://yujianbin.github.io
+date_format: "ordinal"
 title: 于建斌
 subtitle: 个人站
 description: 欢迎来到我的个人站~
 keywords: 于建斌, yujianbin, iOS, Android
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
 # 头像里面的标题
 avatarTitle: Bruce Yu
 # 头像里面的描述
 avatarDesc: iOS / Android
-url: http://yujianbin.github.io
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: yujianbin
+organization: zkh360.com
+organization_url: http://www.zkh360.com
+github_username: yujianbin
+location: Beijing, China
+email: yjbayt@gmail.com
+
+
 
 # Comment
 comment:
@@ -56,7 +74,25 @@ ga:
 # 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
 
-permalink: /:year/:month/:title/
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+
 # Format
 highlighter: rouge
 
