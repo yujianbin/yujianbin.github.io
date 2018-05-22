@@ -2,7 +2,7 @@
 
 ### 使用手册
 
-[Jekyll搭建个人博客](http://yujianbin.github.io/2016/10/jekyll_tutorials1/)  :  使用Jekyll搭建个人博客的教程，以及如果把博客模板修改成你自己的博客，里面也有大量的评论，及 Jekyll 搭建博客出现过的问题。
+[Jekyll搭建个人博客](http://yujianbin.github.io/2016/10/14/jekyll_tutorials1/)  :  使用Jekyll搭建个人博客的教程，以及如果把博客模板修改成你自己的博客，里面也有大量的评论，及 Jekyll 搭建博客出现过的问题。
 
 
 ### 使用条件
@@ -42,7 +42,7 @@ yujianbin.github.io/ 目录下， 开启本地服务
 
 根据上面【提示】修改过后，在你的github里创建一个username.github.io的仓库，username指的值你的github的用户名。      
 创建完成后，把我的这个模板使用git push到你的username.github.io仓库下就行了。
-搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://yujianbin.github.io/2016/10/jekyll_tutorials1/)。
+搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://yujianbin.github.io/2016/10/14/jekyll_tutorials1/)。
 
 
 ### 效果预览

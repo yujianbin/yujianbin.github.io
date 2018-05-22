@@ -114,6 +114,7 @@ nav:
 
 
 # Pagination
-gems: [jekyll-paginate,jekyll-sitemap]
+# gems: [jekyll-paginate,jekyll-sitemap]
+gems: [jekyll-paginate]
 paginate: 20
 paginate_path: "page/:num/"
