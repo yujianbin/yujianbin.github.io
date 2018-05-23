@@ -1,3 +1,10 @@
+---
+layout: post
+title: Wifi 定位原理及 iOS Wifi 列表获取
+date: 2017-01-03 
+tag: iOS
+---
+
 ###### 1,Activity Manager Service
 &nbsp;&nbsp;ActivityManagerService(AMS)是Android提供的一个用于管理Activity(和其他组件)运行状态的系统进程，也是我们编写APK应用程序时使用最频繁的一个系统服务。
 
@@ -42,3 +49,7 @@ private void startBootstrapServices() {
 * 如果通过intent匹配到的目标对象，其所属程序包中已经有其他元素在运行（意味着该程序进程已启动），那么AMS就会通知这个进程来加载运行我们指定的目标activity。
 
 * 如果当前activity所属程序没有进程在运行，AMS就会先启动它的一个实例，然后让其运行目标activity。
+
+
+###### 3, 启动模式
+![](/img/activity启动模式.png)
