@@ -127,12 +127,15 @@ hdiutil create -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size 100g ~/and
 hdiutil resize -size 150g ~/android.dmg.sparseimage
 ```
 磁盘映像如图：
-![](/images/Android/android_img1.png)
+<img src="/images/Android/android_img1.png" width="500px" height="400px"/>
+
+![]()
 
 然后双击就可以装载，就跟一个U盘的使用一样。
 
 ###### 1，cd到源码上一层目录
-![](/images/Android/android_source.png)
+<img src="/images/Android/android_source.png" width="400px" height="200px"/>
+![]()
 
 
 ###### 2，执行初始化脚本
