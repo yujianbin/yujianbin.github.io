@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "MAC系统使用repo下载Android源码"
+title: "MAC系统使用repo下载Android源码并编译"
 description: "MAC, repo, Android源码"
 category: Android
 tags: [android]
 ---
 {% include JB/setup %}
+
 
 ### 一，要安装 Repo，请执行以下操作：
 ###### 1,确保主目录下有一个 bin/ 目录，并且该目录包含在路径中:
@@ -109,3 +110,92 @@ repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-6.0.
 ```
 repo sync
 ```
+
+### 三，编译
+正常来说在下载源码之前，需要创建一个磁盘映像, 然后源码的下载和编译都在这个磁盘映像中；
+我一开始将repo初始化在了Mac本身的磁盘中，结果编译的时候，提示磁盘格式不对，所以才创建了下面的磁盘映像，然后我将源码拖入这个磁盘映像中进行的编译操作。
+
+使用下面命令创建Android的磁盘映像：
+(我开始的时候创建了100g, 结果编译到中途不够了，后来又加了 50g)
+```
+hdiutil create -type SPARSE -fs 'Case-sensitive Journaled HFS+' -size 100g ~/android.dmg
+```
+
+如果磁盘映像空间不够了，用下面命令扩充：
+
+```
+hdiutil resize -size 150g ~/android.dmg.sparseimage
+```
+磁盘映像如图：
+![](/images/Android/android_img1.png)
+
+然后双击就可以装载，就跟一个U盘的使用一样。
+
+###### 1，cd到源码上一层目录
+![](/images/Android/android_source.png)
+
+
+###### 2，执行初始化脚本
+
+```
+source build/envsetup.sh
+```
+或
+
+```
+. build/envsetup.sh
+```
+
+###### 3，选择目标
+
+```
+lunch aosp_arm-eng
+```
+
+###### 4，编译
+
+```
+make -j17
+```
+[官方文档](https://source.android.com/setup/build/building)
+
+
+### 四，编译中遇到的错误
+
+###### 1, fatal error: linux/netfilter/xt_DSCP.h: No such file or directory
+
+cd 到下面这个目录：
+![](/images/Android/comerror.png)
+
+然后创建文件xt_DSCP.h
+
+```
+/*
+* based on ipt_FTOS.c (C) 2000 by Matthew G. Marsh <mgm@paktronix.com>
+* This software is distributed under GNU GPL v2, 1991
+*
+* See RFC2474 for a description of the DSCP field within the IP Header.
+*
+* xt_DSCP.h,v 1.7 2002/03/14 12:03:13 laforge Exp
+*/
+#ifndef _XT_DSCP_TARGET_H
+#define _XT_DSCP_TARGET_H
+#include <linux/netfilter/xt_dscp.h>
+#include <linux/types.h>
+
+/* target info */
+struct xt_DSCP_info {
+    __u8 dscp;
+};
+
+struct xt_tos_target_info {
+    __u8 tos_value;
+    __u8 tos_mask;
+};
+
+#endif /* _XT_DSCP_TARGET_H */
+```
+
+
+###### 2, 模拟器不能启动，环境变量配置
+[推荐博客](http://www.mamicode.com/info-detail-595101.html)
