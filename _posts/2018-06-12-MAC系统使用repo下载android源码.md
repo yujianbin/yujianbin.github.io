@@ -152,13 +152,71 @@ source build/envsetup.sh
 ###### 3，选择目标
 
 ```
-lunch aosp_arm-eng
+lunch
 ```
+运行lunch会列出设备代码：
+
+```
+Lunch menu... pick a combo:
+     1. aosp_angler-userdebug
+     2. aosp_arm-eng
+     3. aosp_arm64-eng
+     4. aosp_bullhead-userdebug
+     5. aosp_bullhead_svelte-userdebug
+     6. aosp_car_arm-userdebug
+     7. aosp_car_arm64-userdebug
+     8. aosp_car_x86-userdebug
+     9. aosp_car_x86_64-userdebug
+     10. aosp_cf_x86_64_auto-userdebug
+     11. aosp_cf_x86_64_phone-userdebug
+     12. aosp_cf_x86_64_tablet-userdebug
+     13. aosp_cf_x86_64_tablet_3g-userdebug
+     14. aosp_cf_x86_64_tv-userdebug
+     15. aosp_cf_x86_64_wear-userdebug
+     16. aosp_cf_x86_auto-userdebug
+     17. aosp_cf_x86_phone-userdebug
+     18. aosp_cf_x86_tablet-userdebug
+     19. aosp_cf_x86_tablet_3g-userdebug
+     20. aosp_cf_x86_tv-userdebug
+     21. aosp_cf_x86_wear-userdebug
+     22. aosp_dragon-eng
+     23. aosp_dragon-userdebug
+     24. aosp_marlin-userdebug
+     25. aosp_marlin_svelte-userdebug
+     26. aosp_sailfish-userdebug
+     27. aosp_taimen-userdebug
+     28. aosp_walleye-userdebug
+     29. aosp_walleye_test-userdebug
+     30. aosp_x86-eng
+     31. aosp_x86_64-eng
+     32. hikey-userdebug
+     33. hikey64_only-userdebug
+     34. hikey960-userdebug
+     35. m_e_arm-userdebug
+     36. mini_emulator_arm64-userdebug
+     37. mini_emulator_x86-userdebug
+     38. mini_emulator_x86_64-userdebug
+     39. uml-userdebug
+```
+
+|设备型号	  |设备代码	   |编译目标|
+|:-------  |:------    |:------|
+|Nexus 6P	|angler	     |aosp_angler-userdebug
+|Nexus 5X	|bullhead	   |aosp_bullhead-userdebug
+|Nexus 6	|shamu	     |aosp_shamu-userdebug
+|Nexus 5	|hammerhead	 |aosp_hammerhead-userdebug
+
+由于我要选择的模拟器，所以运行下面的lunch命令：
+
+```
+lunch aosp_x86_64-eng
+```
+
 
 ###### 4，编译
 
 ```
-make -j17
+make -j16
 ```
 [官方文档](https://source.android.com/setup/build/building)
 
