@@ -57,6 +57,7 @@ vim ~/bin/repo
 ```
 
 可以改下面的REPO_URL, 但是不建议；
+
 ```
 #!/usr/bin/env python
 
