@@ -52,4 +52,4 @@ private void startBootstrapServices() {
 
 
 ###### 3, 启动模式
-![](/img/activity启动模式.png)
+![](../images/posts/AndroidStart/activity启动模式.png)
